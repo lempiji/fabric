@@ -1,3 +1,3 @@
-module fabric.cs.io;
+module fabric.dotnet.io;
 
-public import fabric.cs.io.path;
+public import fabric.dotnet.io.path;

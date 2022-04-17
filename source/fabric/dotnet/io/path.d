@@ -1,5 +1,5 @@
 /// like a System.IO.Path
-module fabric.cs.io.path;
+module fabric.dotnet.io.path;
 
 private import std.algorithm;
 private import std.array;
