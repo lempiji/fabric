@@ -2,6 +2,7 @@ module fabric.sumtype;
 
 public import std.sumtype;
 
+///
 template matchAny(Types...)
 {
     bool matchAny(TSumType)(auto ref TSumType obj)
@@ -15,6 +16,8 @@ template matchAny(Types...)
     }
 }
 
+/// ditto
+@("Overview matchAny")
 unittest
 {
     SumType!(int, string, Object) obj = 100;
