@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/fabric
+fabric.so
+fabric.dylib
+fabric.dll
+fabric.a
+fabric.lib
+fabric-test-*
+*.exe
+*.o
+*.obj
+*.lst
