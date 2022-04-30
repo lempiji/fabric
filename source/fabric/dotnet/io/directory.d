@@ -252,16 +252,19 @@ struct Directory
     +/
 }
 
-@("Directory")
-unittest
+version (Fabric_DotnetIoDirectory_SupportSymlink)
 {
-    Directory.createDirectory("test_link_source");
-    scope (exit)
-        Directory.delete_("test_link_source");
+    @("Directory")
+    unittest
+    {
+        Directory.createDirectory("test_link_source");
+        scope (exit)
+            Directory.delete_("test_link_source");
 
-    auto entry = Directory.createSymbolicLink("test_link", "test_link_source");
-    scope (exit)
-        Directory.delete_("test_link");
+        auto entry = Directory.createSymbolicLink("test_link", "test_link_source");
+        scope (exit)
+            Directory.delete_("test_link");
 
-    assert(entry.name == "test_link", "name: " ~ entry.name);
+        assert(entry.name == "test_link", "name: " ~ entry.name);
+    }
 }
