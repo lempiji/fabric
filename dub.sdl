@@ -3,6 +3,8 @@ description "Generic purpose utilitity library"
 authors "lempiji"
 license "MIT"
 
+versions "Windows10" platform="windows"
+
 configuration "default" {
 	targetType "library"
 }
